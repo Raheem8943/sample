@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--1-->
+
+	<h3>Access an item in the array</h3>
+
+<script>
+
+
+let fruits = ["apple", "banana", "cherry", "mango", "grape"];
+
+document.write(fruits+"<br><br>");
+document.write(fruits[1]);
+
+
+</script>
+
+
+
+<br><br><hr><br><br>
+
+
+<!--2-->
+
+
+<h3>Add an item</h3>
+
+<script>
+
+let animals = ["cat", "dog", "rabbit"];
+document.write(animals+"<br><br>");
+animals.unshift("parrot");
+document.write(animals);
+
+</script>
+
+
+
+<br><br><hr><br><br>
+
+
+<!--3-->
+
+
+<h3>Remove the first item</h3>
+<script>
+
+let numbers = [10, 20, 30, 40];
+document.write(numbers+"<br><br>");
+numbers.shift();
+document.write(numbers);
+
+</script>
+<br><br><hr><br><br>
+
+<!--4-->
+
+<h3>Find the array length</h3>
+<script>
+
+let students = ["Asha", "Vikram", "Zoya", "Karan"];
+document.write(students+"<br><br>");
+
+document.write("Array length: "+students.length);
+
+</script>
+
+<br><br><hr><br><br>
+
+<!--5-->
+
+<h3>Sort in ascending order</h3>
+<script>
+
+let scores = [88, 45, 99, 32, 70];
+document.write(scores+"<br><br>");
+scores.sort();
+document.write(scores);
+
+
+</script>
+
+<br><br><hr><br><br>
+
+<!--6-->
+
+
+
+<h3>Reverse the array</h3>
+
+<script>
+let colors = ["red", "blue", "green", "yellow"];
+document.write(colors+"<br><br>");
+colors.reverse();
+document.write(colors);
+
+</script>
+
+
+<br><br><hr><br><br>
+
+<!--7-->
+<h3>Check for an item’s existence</h3>
+<script>
+let tools = ["hammer", "screwdriver", "wrench"];
+
+
+if (tools.includes("wrench")) {
+
+document.write("wrench exist");
+}else
+{
+	document.write("wrench not exist");
+}
+</script>
+
+<br><br><hr><br><br>
+
+<!--8-->
+<h3>Combine two arrays</h3>
+
+<script>
+
+let boys = ["Aarav", "Dev"];
+document.write("boys: "+boys+"<br><br>");
+
+let girls = ["Meera", "Sara"];
+document.write("girls: "+girls+"<br><br>")
+
+
+let children=boys.concat(girls);
+document.write("children: "+children);
+
+</script>
+
+<br><br><hr><br><br>
+
+<!--9-->
+<h3>Find the index of an item</h3>
+<script>
+
+let countries = ["India", "USA", "UK", "Japan"];
+
+for(i=0;i<countries.length;i++)
+{
+	
+	if(countries[i] === "UK")
+	{
+         document.write(i);
+	}
+}
+
+
+
+
+</script>
+</body>
+</html>
