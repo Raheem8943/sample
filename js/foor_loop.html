@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+<!--1-->
+
+<h3>String & Conditionals</h3>
+
+<script>
+
+let username = "John";
+
+if (username.includes("o")) 
+{
+   document.write("Letter found");
+}else
+
+document.write("Letter not found");
+
+</script>
+
+<!--2-->
+
+<br><br><hr><br><br>
+
+<h3> Arrays & Loops</h3>
+<script>
+
+let names = ["Alice", "Bob", "Charlie", "David"];
+document.write(names+"<br><br>");
+
+for(let i=0;i<names.length;i++)
+{
+   if(names[i].length > 4)
+   {
+     
+     document.write(names[i]);
+
+   }
+}
+
+</script>
+
+
+<!--3-->
+
+<br><br><hr><br><br>
+
+<h3>Arrays, Conditionals & Loops</h3>
+<script>
+let marks = [85, 42, 77, 63];
+document.write(marks+"<br><br>");
+
+for(i=0;i<marks.length;i++)
+{
+   if(marks[i] >=50)
+   {
+      document.write(marks[i]+" = Pass<br><br>")
+   }else
+   {
+      document.write(marks[i]+" = failed<br><br>")
+   }
+}
+
+
+</script>
+
+<!--4-->
+
+<br><br><hr><br><br>
+
+<h3>Convert the string into an array & Print only the numbers greater than 30 </h3>
+<script>
+
+let data = "12,45,78,23,56";
+
+
+
+let crt=data.toString();
+
+let crt2=crt.split(",");
+
+document.write(data+"<br><br>")
+
+for(i=0;i<crt.length;i++)
+{
+   let num=parseInt(crt2[i]);
+
+   if(num>30)
+   {
+      document.write(crt2[i]+"<br>");
+
+   }
+}
+
+
+
+
+
+
+</script>
+
+
+<!--5-->
+
+<br><br><hr><br><br>
+
+<h3></h3>
+
+
+
+
+</body>
+</html>
