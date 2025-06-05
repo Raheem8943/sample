@@ -148,13 +148,108 @@ for(i=0;i<countries.length;i++)
 	
 	if(countries[i] === "UK")
 	{
-         document.write(i);
+         document.write(i)
 	}
+}
+
+</script>
+
+<br><br><hr><br><br>
+
+<!--10-->
+
+<h3>Remove the last item</h3>
+<script>
+
+let tasks = ["email", "meeting", "lunch", "review"];
+document.write(tasks+"<br><br>");
+
+tasks.pop();
+document.write(tasks);
+
+</script>
+<br><br><hr><br><br>
+<!--11-->
+<h3>Insert at a specific index</h3>
+
+<script>
+let cars = ["Toyota", "BMW", "Tesla"];
+document.write(cars+"<br><br>");
+cars.splice(1,0,"Audi")
+document.write(cars);
+
+</script>
+
+<br><br><hr><br><br>
+<!--12-->
+<h3>Filter values based on condition</h3>
+
+<script>
+
+let ages = [12, 25, 17, 30, 45];
+document.write(ages+"<br><br>");
+
+
+let out1=ages.filter(age => age > 18);
+
+document.write(out1);
+
+</script>
+
+<br><br><hr><br><br>
+<!--13-->
+<h3>Convert to a string</h3>
+
+<script>
+
+let greeting = ["H", "e", "l", "l", "o"];
+document.write(greeting+"<br><br>");
+
+let grt=greeting.join('');
+document.write(grt);
+
+</script>
+
+<br><br><hr><br><br>
+<!--14-->
+<h3>Count item occurrences</h3>
+<script>
+
+let colors1 = ["red", "blue", "red", "green", "red"];
+document.write(colors1+"<br><br>");
+
+let result=0;
+for(let color of colors1)
+{
+	if(color==="red")
+	{
+      result++;
+	}
+}
+document.write(result);
+
+
+</script>
+
+</body>
+<br><br><hr><br><br>
+<!--15-->
+<h3>Loop and print items</h3>
+<script>
+
+let city = ["Delhi", "Mumbai", "Chennai", "Kolkata"];
+document.write(city+"<br><br>");
+
+for(i=0;i<city.length;i++)
+{
+  document.write(city[i]+"<br><br>");	
 }
 
 
 
 
+
+
+
 </script>
-</body>
 </html>
