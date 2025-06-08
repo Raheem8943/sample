@@ -106,7 +106,258 @@ for(i=0;i<crt.length;i++)
 
 <br><br><hr><br><br>
 
-<h3></h3>
+<h3>Reverse the string using a loop</h3>
+
+<script>
+
+let message = "Welcome User";
+document.write("Input :"+message+"<br><br>");
+
+let rev='';
+
+for(let i=message.length-1;i>=0;i--)
+{
+   rev+= message[i];
+}
+document.write("Output :"+rev);
+
+
+
+
+</script>
+
+<!--6-->
+
+<br><br><hr><br><br>
+<h3>print each word in uppercase</h3>
+
+<script>
+
+
+let words = ["one", "two", "three"];
+
+for(i=0;i<words.length;i++)
+{
+ 
+  document.write(words[i].toUpperCase()+"<br>")
+}
+
+</script>
+
+<!--7-->
+
+<br><br><hr><br><br>
+<h3>count how many times the letter "a" appears</h3>
+
+<script>
+
+
+let str = "JavaScript is amazing";
+document.write("Input :"+str+"<br><br>");
+
+let result=0;
+for(let i of str)
+{
+   if(i==="a")
+   {
+      result++;
+   }
+}
+document.write("'a' appeared "+result+" Times");
+</script>
+
+<!--8-->
+
+<br><br><hr><br><br>
+<h3>print whether each person is a "Minor" (age < 18) or an "Adult" (age ≥ 18)</h3>
+
+<script>
+
+let ages = [15, 25, 12, 30];
+for(i=0;i<ages.length;i++)
+{
+   if(ages[i]>18)
+   {
+      document.write("age "+ages[i]+": person is adult"+"<br><br>")
+   }else
+   {
+      document.write("age "+ages[i]+": person is minor"+"<br><br>")
+   }
+}
+
+</script>
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+<h3>print how many times "e" appears.</h3>
+
+<script>
+
+
+let str1 = "developer";
+document.write("Input :"+str1+"<br><br>");
+
+let result1=0;
+for(let i of str1)
+{
+   if(i==="e")
+   {
+      result1++;
+   }
+}
+document.write("'e' appeared "+result1+" Times");
+
+</script>
+<!--10-->
+
+<br><br><hr><br><br>
+<h3>Names length is "Even" or "Odd"</h3>
+<script>
+
+let students = ["Tom", "Ann", "Mike"];
+document.write("input :"+students+"<br><br>")
+
+for(let i=0;i<students.length;i++)
+{
+   
+   let na=students[i];
+   let lng=na.length;
+
+   if(lng % 2 === 0)
+   {
+      document.write(na+" Even"+"<br><br>");
+   }else
+   {
+      document.write(na+" Odd"+"<br><br>");
+   }
+}
+
+</script>
+<!--11-->
+
+<br><br><hr><br><br>
+
+<h3>print each index and whether the corresponding value is even or odd</h3>
+<script>
+let numbers = [10, 21, 30, 41, 50, 60];
+document.write("Input :"+numbers+"<br><br>");
+
+for(i=0;i<numbers.length;i++)
+{
+   let num=numbers[i];
+
+   if(num % 2==0)
+   {
+      document.write(i+" Even"+"<br><br>");
+   }else
+   {
+      document.write(i+" Odd"+"<br><br>");
+   }
+
+}
+
+</script>
+<!--12-->
+
+<br><br><hr><br><br>
+<h3>Print only the cities that contain the letter "a" and have a length greater than 5 characters</h3>
+
+<script>
+ let cities = ["Mumbai", "Delhi", "Bangalore", "Agra", "Kolkata"];
+ for(i=0;i<cities.length;i++)
+{
+   let cty=cities[i];
+
+   if(cty.includes("a") && cty.length>5)
+   {
+      document.write(cty+"<br>");
+   }
+}
+
+
+</script>
+
+
+<!--13-->
+
+<br><br><hr><br><br>
+<h3>count how many words are in the string</h3>
+
+<script>
+
+let text = "The code works!";
+document.write("Input :"+text+"<br><br>");
+
+
+let txt1=text.split(" ");
+count=0;
+
+for(i=0;i<txt1.length;i++)
+{
+   
+    count++;
+}
+
+
+
+document.write("Word count :"+count+"<br><br>");
+
+</script>
+
+
+<!--14-->
+
+<br><br><hr><br><br>
+
+<h3>print numbers from 1 to 5,Next to each number, print "Even" or "Odd" using do while loop</h3>
+
+<script>
+
+
+
+let i=1;
+do{
+   if(i % 2 === 0)
+   {
+      document.write(i+" even"+"<br><br>");
+   }
+   else
+   {
+      document.write(i+" odd"+"<br><br>");
+   }
+  i++;
+}while(i<=5);
+
+</script>
+
+<!--14-->
+
+<br><br><hr><br><br>
+
+<h3>names of users who are 18 or older</h3>
+<script>
+
+let users = [ { name: "Alan", age: 17 }, { name: "Bella", age: 22 }, { name: "Chris", age: 15 } ];
+document.write(JSON.stringify(users)+"<br><br>")
+
+
+document.write("users who are 18 or older"+"<br><br>");
+
+
+for(let i=0;i<users.length;i++)
+{
+   if(users[i].age >= 18)
+   {
+      document.write("Output: "+users[i].name+"<br><br>")
+   }
+}
+
+
+</script>
+
+
 
 
 
