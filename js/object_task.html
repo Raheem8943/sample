@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--1-->
+
+<h3>Create a Book Object</h3>
+
+<script>
+
+const book={
+
+title:"Romeo and Juliet",
+author:"William Shakespeare",
+year:1597
+
+};
+
+console.log(book);
+</script>
+
+<!--2-->
+
+<br><br><hr><br><br>
+
+<h3>Nested Objects</h3>
+
+<script>
+const person={
+
+	name:"john",
+	age:33,
+	address:{
+		street:34,
+        state:"washington",
+        country:"usa"
+	}
+};
+
+console.log(person.address);
+
+
+</script>
+
+<!--3-->
+
+<br><br><hr><br><br>
+
+<h3>Dynamic Property Access</h3>
+<script>
+
+
+const book2={
+
+title:"Pride and Prejudice and Emma",
+author:"Jane Austen",
+year:1813
+
+};
+console.log(book2.title);
+console.log(book2.author);
+console.log(book2.year);
+
+</script>
+
+<!--4-->
+
+<br><br><hr><br><br>
+<h3>Merge Two Objects</h3>
+
+<script>
+const obj1={a:1,b:2};
+const obj2={b:3,c:4};
+
+
+const obj3={obj1,obj2};
+console.log(obj3);
+console.log(obj3.obj1.a);
+console.log(obj3.obj2.c);
+
+</script>
+<!--5-->
+
+<br><br><hr><br><br>
+<h3>Object to Array</h3>
+
+<script>
+
+const settings = { darkMode: true, fontSize: 16 };
+
+
+const settings1=Object.keys(settings);
+console.log(settings1);
+
+</script>
+
+<!--6-->
+
+<br><br><hr><br><br>
+<h3>Check if Object is Empty</h3>
+<script>
+
+const emty1={};
+
+function empty(emty1)
+{
+	return Object.keys(emty1).length===0;
+}
+
+console.log(empty(emty1));
+
+</script>
+
+
+<!--7-->
+
+<br><br><hr><br><br>
+
+<h3>Filter Duplicates</h3>
+<script>
+
+const num1=new Set([1, 3, 3, 7, 7, 9, 1]);
+console.log(num1);
+
+</script>
+
+<!--8-->
+
+<br><br><hr><br><br>
+
+<h3>Create a Set from an array and print its size</h3>
+
+<script>
+
+const num2=[1, 3, 3, 7, 7, 9, 1];
+
+//normal array
+
+
+for(let i=0;i<num2.length;i++)
+{
+	console.log(i);
+}
+
+//array using set
+
+const num3=new Set([1, 3, 3, 7, 7, 9, 1]);
+
+console.log(num3.size);
+
+</script>
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+
+<h3>Loop Through Set</h3>
+
+<script>
+
+const colors=new Set(["Red","blue","yellow"]);
+
+for(const color of colors)
+{
+	console.log(color);
+}
+
+</script>
+
+<!--10-->
+
+<br><br><hr><br><br>
+
+
+<h3>Set Operations (Add/Delete)</h3>
+
+<script>
+
+
+let fruits=new Set(["apple","orange","mango"]);
+console.log(fruits);
+
+fruits.add("banana");
+console.log(fruits);
+
+fruits.delete("orange");
+console.log(fruits);
+
+</script>
+
+<!--11-->
+
+<br><br><hr><br><br>
+
+<h3>Store User Info in Map</h3>
+
+<script>
+
+const user= new Map([
+["name","john"],
+["email","john@gmail.com"],
+["age",30]
+]);
+
+console.log(user.get("email"));
+
+</script>
+
+<!--12-->
+
+<br><br><hr><br><br>
+
+<h3>Store User Info in Map</h3>
+
+<script>
+
+ const userMap = new Map([
+["name", "John"],
+["age", 30],
+]);
+
+
+const conObject=Object.fromEntries(userMap.entries());
+
+console.log(userMap);
+
+
+</script>
+
+<!--13-->
+
+<br><br><hr><br><br>
+
+<h3>Use an object as a key in a Map</h3>
+
+<script>
+
+
+const log= new Map();
+
+const user1= {
+name:"john",
+email:"john@gmail.com",
+};
+
+const logTime= new Date().toLocaleString();
+
+log.set(user1,logTime);
+
+const logTime1=log.get(user1);
+
+
+console.log("Loging Time :"+logTime1);
+
+
+
+</script>
+
+
+
+<!--14-->
+
+<br><br><hr><br><br>
+
+<h3>Check Key Existence in Map</h3>
+
+<script>
+
+
+const check = new Map();
+
+check.set("name","john");
+check.set("age",30);
+check.set("city","new york");
+
+const key="age";
+
+if(check.has(key))
+{
+	const rest=check.get(key);
+	console.log(key+" with value "+rest);
+}
+else
+{
+	console(key+" not existed ");
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<!--15-->
+
+<br><br><hr><br><br>
+
+<h3>Frequency Counter with Map</h3>
+
+<script>
+let str="JavaScript is Amazing";
+
+function count(str)
+{
+	const countMap=new Map();
+
+
+	for(let word of str)
+	{
+       countMap.set(word,(countMap.get(word) || 0)+1);
+       }
+       
+	for(let [word,count] of countMap )
+	{
+		console.log("character "+word+" appears "+count+" times");
+	}
+}
+count(str);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
