@@ -49,6 +49,10 @@ console.log(person.address);
 <h3>Dynamic Property Access</h3>
 <script>
 
+	function getValue(obj, key){
+		return obj[key];
+	}
+
 
 const book2={
 
@@ -57,9 +61,9 @@ author:"Jane Austen",
 year:1813
 
 };
-console.log(book2.title);
-console.log(book2.author);
-console.log(book2.year);
+console.log(getValue(book2,"title"));
+console.log(getValue(book2,"author"));
+console.log(getValue(book2,"year"));
 
 </script>
 
@@ -70,13 +74,11 @@ console.log(book2.year);
 
 <script>
 const obj1={a:1,b:2};
-const obj2={b:3,c:4};
+const obj2={c:3,d:4};
 
 
-const obj3={obj1,obj2};
-console.log(obj3);
-console.log(obj3.obj1.a);
-console.log(obj3.obj2.c);
+const merge={...obj1,...obj2};
+console.log(merge);
 
 </script>
 <!--5-->
@@ -89,7 +91,7 @@ console.log(obj3.obj2.c);
 const settings = { darkMode: true, fontSize: 16 };
 
 
-const settings1=Object.keys(settings);
+const settings1=Object.entries(settings);
 console.log(settings1);
 
 </script>
@@ -283,7 +285,7 @@ if(check.has(key))
 }
 else
 {
-	console(key+" not existed ");
+	console.log(key+" not existed ");
 }
 
 
