@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--1-->
+
+<h3>Create an Object with a Method</h3>
+<script>
+
+const student={
+
+	name:"jhon",
+	mark:40,
+	getResult:function()
+	{
+		return this.mark>=40?"pass":"Fail";
+	}
+};
+console.log(student.getResult());
+
+</script>
+
+
+<!--2-->
+
+<br><br><hr><br><br>
+
+<h3>Loop Through Object Properties</h3>
+
+<script>
+
+const device=
+{
+	brand:"samsung",
+	type:"phone",
+	price:10000
+};
+
+for(let key in device)
+{
+   console.log(key + " :"+device[key] );
+}
+
+</script>
+
+<!--3-->
+
+<br><br><hr><br><br>
+
+<h3>Check for Property Existence</h3>
+
+<script>
+
+const student1={
+	name:"alexadra",
+	age:27,
+	place:"austin"
+}
+
+function checkExistance(obj,key)
+{
+	if(key in obj)
+	{
+		console.log("yes, "+key+" exist in the object")
+	}else
+	{
+		console.log("no, "+key+" does not exist in the object")
+	}
+}
+
+
+checkExistance(student1,"name");
+
+checkExistance(student1,"age");
+
+checkExistance(student1,"counrty");
+
+checkExistance(student1,"place");
+
+
+
+</script>
+
+
+<!--4-->
+
+<br><br><hr><br><br>
+
+<h3>Delete Property from Object</h3>
+
+
+<script>
+
+const sudent3={
+	name:"alice",
+	age:25,
+}
+
+console.log(sudent3);
+
+delete sudent3.age;
+
+console.log(sudent3);
+
+</script>
+
+
+<!--5-->
+
+<br><br><hr><br><br>
+
+<h3>Freeze an Object</h3>
+
+<script>
+
+const person={
+	name:"jake",
+	age:35,
+	place:"DC"
+}
+
+Object.freeze(person);
+
+console.log(person);
+
+person.age=61;
+
+console.log(person);
+
+
+</script>
+
+<!--6-->
+
+<br><br><hr><br><br>
+
+<h3>Merge Multiple Objects</h3>
+
+<script>
+
+const obj1={a:1,b:2,c:3};
+const obj2={d:4,e:8,f:9};
+const obj3={g:8,h:9,j:10};
+
+
+const merge={...obj1,...obj2,...obj3};
+
+console.log(merge);
+
+</script>
+
+<!--7-->
+
+<br><br><hr><br><br>
+
+<h3>Nested Object Access and Update</h3>
+<script>
+
+
+const person2={
+
+	name:"john",
+	age:33,
+	location:{
+		street:34,
+        city:"austin",
+        country:"usa"
+	}
+};
+
+
+console.log(person2.location.city);
+
+person2.location.city="new york";
+
+console.log(person2.location.city);
+
+
+</script>
+
+<!--8-->
+
+<br><br><hr><br><br>
+
+<h3>Convert Object to Keys and Values Array</h3>
+
+
+<script>
+
+const person3={
+	name:"jackob",
+	age:45,
+	country:"Germany"
+}
+
+function covert(obj)
+{
+   const keys=Object.keys(obj);
+   const value=Object.values(obj);
+   return {keys, value};
+}
+
+
+const output=covert(person3);
+
+console.log("Array and key :",output.keys);
+
+console.log("Array and value :",output.value);
+
+
+
+
+</script>
+
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+<h3>Clone an Object</h3>
+
+<script>
+
+const person4={
+	name:"alexander",
+	age:48,
+	country:"france"
+}
+
+
+function clone(obj)
+{
+	return Object.assign({},obj)
+}
+
+
+const cloneperson4=clone(person4);
+
+
+console.log("original :",person4);
+
+console.log("cloned :",cloneperson4);
+
+
+</script>
+
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+<h3>Count Properties in Object</h3>
+
+<script>
+
+
+const person5={
+	name:"jhony",
+	age:47,
+	country:"usa"
+}
+
+function countObj(obj)
+{
+	return Object.keys(obj).length;
+}
+
+
+const count=countObj(person5);
+
+
+console.log("Count of properties :",count);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
