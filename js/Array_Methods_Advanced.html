@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--1-->
+
+<h3>Array using .includes()</h3>
+
+<script>
+
+let  fruits=['apple', 'banana', 'mango'];
+
+console.log(fruits.includes("banana"));
+
+</script>
+
+<!--2-->
+
+<br><br><hr><br><br>
+
+<h3>greater than 10 using .find()</h3>
+
+<script>
+
+
+let numbers=[3, 8, 12, 5, 20];
+
+const grt=numbers.find(num => num>10);
+console.log(grt)
+
+</script>
+
+<!--3-->
+
+<br><br><hr><br><br>
+
+<h3>ascending order using .sort()</h3>
+<script>
+
+let sortnum=[100, 25, 1, 78, 32];
+
+sortnum.sort((a,b)=>a-b);
+
+console.log(sortnum)
+
+</script>
+
+<!--4-->
+
+<br><br><hr><br><br>
+
+<h3>modifying the original array using .toSorted()</h3>
+
+<script>
+
+
+let tosort=[100, 25, 1, 78, 32];
+
+const tosortcpy=tosort.toSorted((a,b)=>a-b);
+
+console.log(tosortcpy)
+
+</script>
+
+<!--5-->
+
+<br><br><hr><br><br>
+
+
+<h3>Reverse the array</h3>
+
+<script>
+
+const colors= ['red', 'green', 'blue'];
+
+
+const revcolors=colors.reverse();
+
+console.log(revcolors);
+
+</script>
+
+<!--6-->
+
+<br><br><hr><br><br>
+
+
+<h3> reversed copy of the array</h3>
+
+<script>
+
+
+const colors1= ['red', 'green', 'blue'];
+
+const revcolors1=colors1.toReversed();
+
+console.log(revcolors1);
+
+</script>
+
+<!--7-->
+
+<br><br><hr><br><br>
+
+
+<h3>  log each name with the message Hello, <name>! using .forEach()</h3>
+
+<script>
+
+
+const names =['Alice', 'Bob', 'Charlie'];
+
+
+
+names.forEach( name => {console.log(`hello ${name}`)});
+
+
+</script>
+
+<!--8-->
+
+<br><br><hr><br><br>
+
+
+<h3>return a new array with only the values greater than 10 using .filter()</h3>
+
+<script>
+
+const arr1=[5, 12, 8, 130, 44];
+
+const newarr=arr1.filter(num=>num >10);
+
+console.log(newarr);
+
+</script>
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+
+<h3>10% discount applied to each using .map()</h3>
+
+<script>
+
+const prices =[100, 200, 300];
+
+const disc=prices.map(price => price*0.9)
+
+
+console.log(disc)
+
+
+</script>
+
+<!--10-->
+
+<br><br><hr><br><br>
+
+
+<h3>using .reduce()</h3>
+<script>
+
+const arr2= [1, 2, 3, 4, 5];
+
+const sum=arr2.reduce((total,number)=>total+number);
+
+console.log(sum);
+
+</script>
+
+<!--11-->
+
+<br><br><hr><br><br>
+
+
+<h3>using .some()</h3>
+
+<script>
+
+const ages =[16, 21, 13, 34];
+const adult=ages.some(age=>age>18);
+
+console.log(adult);
+</script>
+
+<!--12-->
+
+<br><br><hr><br><br>
+
+
+<h3>using .every()</h3>
+<script>
+
+const arr3=[10, 20, 30, 40];
+const grtarr5=arr3.every(arr=>arr>5);
+console.log(grtarr5);
+</script>
+
+<!--13-->
+
+<br><br><hr><br><br>
+
+
+<h3>18 or older using .filter() and .map()</h3>
+
+<script>
+ const users = [{ name: 'Alice', age: 17 },{ name: 'Bob', age: 22 },{ name: 'Charlie', age: 19 }];
+
+
+const adt=users.filter(user=>user.age>18).map(user=>user.name);
+
+console.log(adt);
+
+</script>
+
+<!--14-->
+
+<br><br><hr><br><br>
+
+<h3>find the user whose name is "Bob" and return just his age using .find() and object access</h3>
+
+<script>
+
+
+const bob=users.find(user=>user.name==="Bob");
+console.log(bob.age);
+
+
+</script>
+
+<!--15-->
+
+<br><br><hr><br><br>
+
+<h3>use .reduce() to get the sum of the remaining numbers</h3>
+
+<script>
+
+const num3=[5, 10, 15, 20, 25];
+const numFilter=num3.filter(num=>num>=15).reduce((sum,num)=>sum+num);
+
+console.log(numFilter);
+
+
+
+
+
+</script>
+
+</body>
+</html>
