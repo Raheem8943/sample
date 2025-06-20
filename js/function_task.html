@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--1-->
+
+<h3>Function Statement</h3>
+
+<script>
+
+function greetUser(name)
+{
+	console.log("Hello "+name);
+	return;
+}
+
+greetUser("john");
+
+
+</script>
+
+<!--2-->
+
+<br><br><hr><br><br>
+
+<h3>Function Expression</h3>
+
+<script>
+
+function addNumbers(a,b)
+{
+  return a+b;
+}
+
+const result=addNumbers(4,6);
+
+console.log(result);
+
+
+</script>
+
+<!--3-->
+
+<br><br><hr><br><br>
+
+<h3>Arrow Function</h3>
+
+<script>
+
+const square=(a)=> a*a
+
+result1=square(9);
+
+console.log(result1);
+
+
+
+</script>
+
+
+<!--4-->
+
+<br><br><hr><br><br>
+
+<h3>Higher Order Function</h3>
+
+<script>
+
+function multiply(a,b)
+{
+	return a*b;
+}
+
+
+
+
+function operate(callback,a,b)
+{
+	return callback(a,b)
+}
+
+const result2=operate(multiply,3,5)
+
+console.log(result2)
+
+
+</script>
+
+<!--5-->
+
+<br><br><hr><br><br>
+
+<h3>Callback Function</h3>
+
+<script>
+
+function addNumber(a,b)
+{
+	return a+b;
+}
+
+function subNumber(a,b)
+{
+	return a-b;
+}
+
+
+
+
+function calculator(callback1,a,b)
+{
+	return callback1(a,b)
+}
+
+
+
+console.log(calculator(addNumber,10,8));
+
+console.log(calculator(subNumber,10,8));
+
+
+</script>
+
+
+
+
+<!--6-->
+
+<br><br><hr><br><br>
+
+<h3>Function Invocation</h3>
+
+<script>
+
+function showMessage()
+{
+	console.log( "Function was called!");
+}
+
+showMessage();
+showMessage();
+showMessage();
+
+
+
+</script>
+
+<!--7-->
+
+<br><br><hr><br><br>
+
+<h3>Parameters vs Argument</h3>
+
+<script>
+
+function printFullName(firstName,lastName)
+{
+	console.log(`full name : ${firstName} ${lastName}`);
+}
+
+printFullName("jhon","francis");
+
+
+</script>
+
+
+
+
+<!--8-->
+
+<br><br><hr><br><br>
+
+<h3>Anonymous Function as Callback</h3>
+<script>
+
+setTimeout(function()
+{
+	console.log("Delayed Hello" );
+},2000)
+
+</script>
+
+<!--9-->
+
+<br><br><hr><br><br>
+
+<h3>Return a Function</h3>
+
+<script>
+
+function multiplier(x)
+{
+   return function(y)
+   {
+   	return x*y;
+   };
+}
+
+const double=multiplier(2);
+console.log(double(5));
+
+
+</script>
+<!--10-->
+
+<br><br><hr><br><br>
+
+<h3>Custom Filter with Higher-Order Function</h3>
+
+<script>
+
+
+function filterArray(arr , callback3)
+
+{
+	const output2=[]
+	for(let i=0;i<arr.length;i++)
+	{
+		if(callback3(arr[i]))
+		{
+			output2.push(arr[i]);
+		}
+	}
+	return output2;
+}
+
+
+const output3=filterArray([5,10,15],function(num)
+   {
+   	return num>10;
+   }
+);
+
+console.log(output3);
+
+</script>
+
+
+</body>
+</html>
