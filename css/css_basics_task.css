@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* 1. back ground colour */
+
+  background-color: #b6ccd8;
+  padding: 10px 10px 10px 10px;
+}
+
+h1 {
+  /* 3. center-align and make them blue */
+  text-align: center;
+  color: blue;
+}
+
+p {
+  /* 5. paragraphs have a font size of 16px and color green */
+  font-size: 16px;
+  color: green;
+}
+span {
+  /* 6. Write a rule to style span */
+  font-style: italic;
+  color: purple;
+}
+.highlight {
+  /* 7. highlight class has a background color of yellow */
+  background-color: yellow;
+}
+
+li:first-child {
+  /* 8. Style the first <li> item in every list  */
+  color: red;
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+  /* 14. Use rgba to make text 50% transparent blue */
+  color: rgb(0, 0, 225, 0.5);
+}
+
+h2 {
+  /*11 . Add a CSS comment above a rule that styles headings */
+  /* 13.  Set the color of all <h2> tags to a HEX color code*/
+  color: #ff5733;
+}
+
+footer {
+  /*12.  styling footer*/
+  background-color: white;
+}
