@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  /* 1. back ground colour */
+  /* 1.  apply a background colour */
 
   background-color: #b6ccd8;
   padding: 10px 10px 10px 10px;
@@ -51,4 +51,17 @@ h2 {
 footer {
   /*12.  styling footer*/
   background-color: white;
+}
+/* 15 .Apply a background image to a <div> and make it cover the whole box */
+/* 16 .Make a fixed background image that doesn't scroll with content*/
+.background_img {
+  background-image: url(rog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+/*17 .Create a box with a 3px dashed red border */
+.dash_border {
+  border: 3px dashed red;
 }

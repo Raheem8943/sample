@@ -1,0 +1,83 @@
+* {
+  /* 26 .Enable border-box model for all elements */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+}
+/* 18 .Create a circle using border-radius on a square div */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+/*19 .Add 20px margin to the top and bottom of a <section> */
+.setting_margin {
+  margin: 20px 0;
+  background-color: lightgray;
+}
+
+/* 20 .Set auto left/right margins to horizontally center a div */
+.center_a_div {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  background-color: lightpink;
+}
+/* 21 .Add 10px padding to all sides of a <button> */
+.button_padding {
+  padding: 10px;
+}
+/* 22 .Add 5px padding to the top/bottom and 15px to the left/right */
+
+.button_padding2 {
+  padding: 5px 15px;
+}
+/* 23 .Set the height of a <div> to 300px and width to 50% */
+.div_dimension {
+  height: 300px;
+  width: 50%;
+  background-color: lightblue;
+}
+/* 24 .Set a max-width of 600px to a container. */
+.container_width {
+  max-width: 600px;
+  height: 100px;
+  background-color: lightgreen;
+}
+/* 25 .Create a <div> with margin, padding, border, and fixed width */
+.box-model {
+  margin: 20px;
+  padding: 15px;
+  padding: 2px solid black;
+  width: 300px;
+  background-color: lightcoral;
+}
+/* 27 .Add an outline to an <input> field on focus*/
+.input_text {
+  outline: 2px solid blue;
+}
+/* Remove the default focus outline on buttons */
+.remove_focus_on_button {
+  outline: none;
+}
+/*29 . Make all paragraph text bold, uppercase, and center-aligned */
+p {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*  30 .Add letter spacing and line height to a paragraph*/
+  letter-spacing: 2px;
+  line-height: 1.5;
+  /* 31 .Set font to 'Verdana' and size to 14px for all <p> tags */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a {
+  /* 33 .Style all <a> tags to remove underline and turn green on hover */
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+}
