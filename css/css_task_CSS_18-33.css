@@ -81,3 +81,7 @@ a {
 a:hover {
   color: green;
 }
+/*34. Change bullet style of unordered list to circle */
+ul {
+  list-style-type: circle;
+}
