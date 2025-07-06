@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 15px;
+}
+/* 1. Center a div both horizontally and vertically using Flexbox. */
+.container-centre-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  background-color: lightgreen;
+  border: 1px solid black;
+}
+.centre-div {
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+}
+/* 2. Create a responsive navigation bar using Flexbox. */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(201, 115, 9);
+  color: white;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 600px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* 3. Make a 3-column layout using CSS Grid. */
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.coloumn {
+  background-color: blueviolet;
+  pad: 20px;
+  text-align: center;
+}
+
+/* 4. Create a responsive image gallery with Grid. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* 5. Write a media query that changes background color below 600px. */
+
+.color-change-div {
+  padding: 30px;
+  background-color: lightcoral;
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  .color-change-div {
+    background-color: lightgreen;
+  }
+}
+/* 6. Use @supports to apply a style only if Grid is supported. */
+.gridsupport {
+  padding: 20px;
+  background-color: gray;
+}
+@supports (display: grid) {
+}
+.gridsupport {
+  display: grid;
+  place-items: center;
+  background-color: aquamarine;
+}
+/* 7. Create a sticky header using CSS. */
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: brown;
+  color: white;
+  padding: 15px;
+}
+/* 8. Add a smooth hover effect on a button. */
+.button-effect {
+  padding: 10px 20px;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+.button-effect:hover {
+  background-color: chartreuse;
+}
+/* 9. Use SASS to create a nested style for a button inside a nav. */
+nav {
+  background-color: coral;
+  padding: 10px;
+  button {
+    background-color: rgb(180, 70, 70);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: blue;
+    }
+  }
+}
+/* 10. Write a class to hide an element on screens below 768px. */
+.hide-element {
+  text-align: center;
+  background-color: aquamarine;
+}
+@media (max-width: 768px) and (max-height: 768px) {
+  .hide-element {
+    display: none;
+  }
+}
+
+/* 11. Make an image fully responsive. */
+.img-responsive img {
+  max-width: 100%;
+  height: auto;
+}
+.img-responsive {
+  width: 800px;
+  width: 800px;
+}
+/* 12. Create a flex container with wrapping and spacing. */
+.container3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.box {
+  background-color: lightgray;
+  padding: 20px;
+  flex: 1 1 150px;
+}
+
+/*13. Make a div take 2 columns in a 4-column grid layout. */
+.grid-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.span-item {
+  grid-column: span 2;
+  background-color: lightblue;
+}
+.item {
+  background-color: lightcoral;
+  padding: 20px;
+}
+/* 14. Use rem units to set padding. */
+
+.rem-padding {
+  padding: 2rem;
+  background-color: aqua;
+}
+/* 15. Use calc() to set a dynamic width. */
+.cal-box {
+  width: calc(100% - 70px);
+  padding: 15px;
+  background-color: aquamarine;
+}
+/* 16. Create a mobile-first responsive card layout. */
+.cards {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
+
+.card {
+  background-color: chartreuse;
+  padding: 20px;
+}
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
+  .card {
+    flex: 1;
+  }
+}
+/* 17. Create a dropdown menu using only CSS hover. */
+.nav-bar2 ul {
+  list-style: none;
+}
+.nav-bar2 > ul > li {
+  position: relative;
+}
+.drop-down {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  padding: 20px;
+}
+.nav-bar2 li:hover .drop-down {
+  display: block;
+}
+/* 18. Create a circular image thumbnail. */
+.thumb-nail img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+/* 19. Create a responsive video embed. */
+.video-container {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-containe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 20. Use a pseudo-element to add a label before an element. */
+.add-label-before::before {
+  content: "label :";
+  color: crimson;
+}
+/* 21. Create a tooltip using only CSS. */
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip2:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+/* 22. Make a simple card layout with box-shadow. */
+.box-shadow {
+  background-color: #c7b0b0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+/* 23. Create a responsive footer with Flexbox. */
+.footer {
+  display: flex;
+  background-color: aquamarine;
+  gap: 15px;
+}
+.footer-link a {
+  text-decoration: none;
+  padding: 20px;
+}
+.footer-link {
+  flex-direction: row;
+}
+/* 24. Create a full-page centered login form. */
+.login-form {
+  height: 800px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+.log-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: rgb(55, 55, 173);
+  color: white;
+}
+.log-box a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 6px;
+  width: 70px;
+  border: 1px solid black;
+}
+.log-box input {
+  border-radius: 3px;
+  height: 30px;
+  text-align: left;
+}
+/* 25. Create a responsive grid layout that adapts to screen size. */
+.grid-layout {
+  display: grid;
+  padding: 10px;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.grid-item {
+  background-color: aqua;
+  padding: 20px;
+  text-align: center;
+}
+/* 26. Create a flexbox layout where the sidebar takes 1/4th and content 3/4th width */
+.layout-div {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+.sidebar {
+  flex: 1;
+  background-color: rgb(59, 163, 163);
+  padding: 20px;
+}
+.content {
+  flex: 3;
+  background-color: rgb(27, 104, 104);
+  padding: 20px;
+}
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+  }
+}
+/* 27. Make a full-page background image that scales correctly. */
+.background-img {
+  background-image: url(2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+/* 28. Add a gradient background to a div. */
+.gradiant-div {
+  height: 600px;
+  width: auto;
+  background: linear-gradient(45deg, #ff9800, #4db3e2);
+}
+/* 29. Style a link to look like a button. */
+.dec-link a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(25, 92, 119);
+  padding: 8px;
+  border-radius: 6px;
+  width: 150px;
+  height: 60px;
+  border: 1px solid black;
+}
+.dec-link {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  padding: 50px;
+}
+/* 30. Create a bouncing animation using keyframes. */
+.bounce {
+  width: 100px;
+  background-color: #ff9800;
+  animation: bounce 2s infinite;
+  color: white;
+  text-align: center;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+/* 31. Use grid-template-areas for layout. */
+.grid-div1 {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  padding: 15px;
+}
+.header1 {
+  grid-area: header;
+  background-color: rgb(60, 60, 155);
+  text-align: center;
+  color: white;
+}
+.sidebar1 {
+  grid-area: sidebar;
+  background-color: rgb(151, 47, 143);
+  text-align: center;
+  color: white;
+}
+.main1 {
+  grid-area: main;
+  background-color: rgb(211, 24, 111);
+  text-align: center;
+  color: white;
+}
+.footer1 {
+  grid-area: footer;
+  background-color: rgb(212, 77, 77);
+  text-align: center;
+  color: white;
+}
+/* 32. Fade in an element using opacity and animation. */
+.fade {
+  opacity: 0;
+  animation: fadeIn 2s forwards infinite;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* 33. Change text color on hover. */
+.change-color {
+  text-align: center;
+  font-size: 60px;
+}
+.change-color:hover {
+  color: #ff9800;
+}
+/* 34. Create an outlined button. */
+.outline-button {
+  background-color: transparent;
+  color: rgb(224, 186, 103);
+  padding: 10px 20px;
+  border: 1px solid black;
+  transition: background-color 0.3s, color 0.3s;
+}
+.outline-button:hover {
+  background-color: #4f0552;
+  color: white;
+}
+/* 35. Apply a custom scrollbar style. */
+.scrollbar-style {
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid black;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  background: #807878;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  background-color: #789fc9;
+  border-radius: 4px;
+}
