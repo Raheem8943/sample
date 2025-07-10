@@ -110,19 +110,20 @@ body {
   background-color: chartreuse;
 }
 /* 9. Use SASS to create a nested style for a button inside a nav. */
-nav {
+.nav-edit {
   background-color: coral;
   padding: 10px;
-  button {
-    background-color: rgb(180, 70, 70);
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    &:hover {
-      background-color: blue;
-    }
-  }
 }
+.nav-edit button {
+  background-color: rgb(180, 70, 70);
+  padding: 10px 20px;
+  color: white;
+  border: none;
+}
+.nav-edit button:hover {
+  background-color: blue;
+}
+
 /* 10. Write a class to hide an element on screens below 768px. */
 .hide-element {
   text-align: center;
