@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 1. Show and Hide Paragraph
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("#para1").hide();
+        });
+        $("#show").click(function () {
+          $("#para1").show();
+        });
+        // 2.  Toggle Password Visibility
+        $("#showpassword").change(function () {
+          const type = $(this).is(":checked") ? "text" : "password";
+          $("#password").attr("type", type);
+        });
+        // 3. Live Character Counter
+        $("#text-area").on("input", function () {
+          $("#char-count").text($(this).val().length);
+        });
+        //4. Change Background on Hover
+        $(".change-bc").hover(
+          function () {
+            $(this).css("background-color", "lightblue");
+          },
+          function () {
+            $(this).css("background-color", "white");
+          }
+        );
+        // 5. Add Items to List
+        $("#add-item").click(function () {
+          const item = $("#input-item").val();
+          if (item.trim() !== "") {
+            $("#List").append(`<li>${item}</li>`);
+            $("#input-item").val("");
+          }
+        });
+        // 6. Simple Form Validation
+        $("#simple-form").submit(function (event) {
+          event.preventDefault();
+          const name = $("#name").val().trim();
+          const email = $("#mail").val().trim();
+          let hasError = false;
+          if (name === "") {
+            $(".name-error").text("please enter your name");
+            hasError = true;
+          }
+          if (email === "") {
+            $(".email-error").text("please enter your email");
+            hasError = true;
+          }
+          if (!hasError) {
+            alert(`name : ${name}\n email : ${email}`);
+            $(this).trigger("reset");
+          }
+        });
+        // 7.Animate a Box
+        $("#ani-button").click(function () {
+          $("#box").animate(
+            {
+              left: "+=100px",
+              width: "+=100px",
+              height: "+=100px",
+            },
+            1000
+          );
+        });
+        //8. Slide Toggle Content
+        $("#heading-t").click(function () {
+          $("#toggle").slideToggle();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="hide-show">
+      <p id="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        repellendus, nesciunt tenetur distinctio itaque velit doloremque eum
+        molestiae voluptates illum veritatis at ipsam iste esse tempore eos
+        officiis nam iusto.
+      </p>
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
+    </div>
+    <br />
+    <div class="toggle-password">
+      <input type="password" id="password" />
+      <label><input type="checkbox" id="showpassword" />showpassword</label>
+    </div>
+    <br />
+    <textarea id="text-area"></textarea>
+    <p>Character count :<span id="char-count">0</span></p>
+    <div class="change-bc">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+      similique voluptas nobis quia vel quaerat distinctio deserunt rerum in
+      molestias, obcaecati maxime nisi voluptatem quos beatae dolorem id sunt
+      cupiditate.
+    </div>
+    <br />
+    <input type="text" id="input-item" />
+    <button id="add-item">add</button>
+    <ul id="List"></ul>
+    <br />
+    <form action="" id="simple-form">
+      <input type="text" id="name" placeholder="Name" />
+      <br />
+      <div class="name-error"></div>
+      <input type="text" id="mail" placeholder="Email" />
+      <br />
+      <div class="email-error"></div>
+      <br />
+      <button id="sumbit-btn">Submit</button>
+    </form>
+    <br />
+    <div
+      id="box"
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        position: relative;
+      "
+    ></div>
+    <button id="ani-button">animate</button>
+    <h3 id="heading-t">Click to toggle content</h3>
+    <div id="toggle" style="display: none">
+      <p>Slide up or down the content</p>
+    </div>
+  </body>
+</html>
