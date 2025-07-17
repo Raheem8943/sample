@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eStore cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <body>
+  <h1>Your Cart</h1>
+  <div id="cart-list"></div>
+  <h2 id="total-price"></h2>
+  <button id="clear-cart">Clear Cart</button>
+
+  <script>
+    $(document).ready(function() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      console.log(cart.length);
+      var total = 0;
+
+      if (cart.length === 0) {
+        $('#cart-list').html('<p>Your cart is empty.</p>');
+      } else {
+        for (var i = 0; i < cart.length; i++) {
+          var item = cart[i];
+          total += item.price;
+          $('#cart-list').append(`
+            <div class="cart-item">
+              <h4>${item.title}</h4>
+              <img src="${item.image}" alt="${item.title}">
+              <p>Price: $${item.price}</p>
+              <button class="remove-item" data-index="${i}">Remove</button>
+            </div>`
+          );
+        }
+        $('#total-price').text('Total: $' + total.toFixed(2));
+      }
+
+      
+      $(document).on('click', '.remove-item', function() {
+        var index = $(this).data('index');
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload();
+      });
+
+      $('#clear-cart').click(function() {
+        localStorage.removeItem('cart');
+        location.reload();
+      });
+    });
+  </script>
+    
+</body>
+</html>
